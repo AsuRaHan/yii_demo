@@ -1,0 +1,6 @@
+/db/*
+/yii_demo/*.log
+/yii_demo/*.db
+/yii_demo/.env
+/yii_demo/nbproject/*
+/yii_demo/vendor/*
