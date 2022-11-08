@@ -125,10 +125,11 @@ class SiteController extends Controller {
         $cats =[];
         $crumbs = [];
         if(!$id){
-            $cats = Category::find()->where(['parent_id' => null])->all();
+            $cats = Category::find()->with('children')->where(['parent_id' => null])->all();
         }else{
-            $cats = Category::find()->where(['id' => $id])->all();
+            $cats = Category::find()->with('children')->where(['id' => $id])->all();
             $crumbs = $this->generateBreadcrumbs($cats[0]);
+            $cats = $cats[0]->children;
         }
         
 
