@@ -9,14 +9,14 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Category;
 
-class SiteController extends Controller
-{
+class SiteController extends Controller {
+
     /**
      * {@inheritdoc}
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'access' => [
                 'class' => AccessControl::class,
@@ -41,8 +41,7 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -59,8 +58,7 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         return $this->render('index');
     }
 
@@ -69,8 +67,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
-    {
+    public function actionLogin() {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -82,7 +79,7 @@ class SiteController extends Controller
 
         $model->password = '';
         return $this->render('login', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -91,8 +88,7 @@ class SiteController extends Controller
      *
      * @return Response
      */
-    public function actionLogout()
-    {
+    public function actionLogout() {
         Yii::$app->user->logout();
 
         return $this->goHome();
@@ -103,8 +99,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionContact()
-    {
+    public function actionContact() {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
@@ -112,7 +107,7 @@ class SiteController extends Controller
             return $this->refresh();
         }
         return $this->render('contact', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -121,8 +116,34 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionAbout()
-    {
+    public function actionAbout() {
         return $this->render('about');
+    }
+    
+    public function actionCategory() {
+        $id = Yii::$app->request->get('category_id');
+        $cats =[];
+        $crumbs = [];
+        if(!$id){
+            $cats = Category::find()->where(['parent_id' => null])->all();
+        }else{
+            $cats = Category::find()->where(['id' => $id])->all();
+            $crumbs = $this->generateBreadcrumbs($cats[0]);
+        }
+        
+
+        return $this->render('category', compact('cats','crumbs'));
+    }
+
+    private function generateBreadcrumbs($cats) {
+        if(isset($cats->parent)){
+            $curArr = [];
+            $curArr = array_merge($curArr , $this->generateBreadcrumbs($cats->parent) );
+            $curArr = array_merge($curArr , [['label' => $cats->name, 'url' =>$cats->url]] );
+            return $curArr;
+        }else{
+            return [['label' => $cats->name, 'url' =>$cats->url]];
+        }
+        
     }
 }
