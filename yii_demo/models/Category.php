@@ -42,20 +42,20 @@ class Category extends \yii\db\ActiveRecord {
      */
     public static function tableName() {
 
-        return 'categories';
+        return 'category';
     }
 
-    public function behaviors() {
-
-        return [
-            TimestampBehavior::className(),
-            [
-                'class' => SluggableBehavior::className(),
-                'attribute' => 'title',
-                'slugAttribute' => 'slug',
-            ]
-        ];
-    }
+//    public function behaviors() {
+//
+//        return [
+//            TimestampBehavior::className(),
+//            [
+//                'class' => SluggableBehavior::className(),
+//                'attribute' => 'title',
+//                'slugAttribute' => 'slug',
+//            ]
+//        ];
+//    }
 
     /**
 

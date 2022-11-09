@@ -119,34 +119,44 @@ class SiteController extends Controller {
     public function actionAbout() {
         return $this->render('about');
     }
-    
+
     public function actionCategory() {
         $id = Yii::$app->request->get('category_id');
-        $cats =[];
+        $cats = [];
         $crumbs = [];
         $firstSort = false;
-        if(!$id){
-            $cats = Category::find()->with(['children','parent'])->where(['parent_id' => null])->all();
+        if (!$id) {
+            $cats = $this->getParentCat();
             $firstSort = false;
-        }else{
-            $cats = Category::find()->with(['children','parent'])->where(['id' => $id])->all();
+        } else {
+            $cats = Category::find()->with(['children', 'parent'])->where(['id' => $id])->all();
             $crumbs = $this->generateBreadcrumbs($cats[0]);
             $cats = $cats[0]->children;
             $firstSort = true;
         }
-        
-        return $this->render('category', compact('cats','crumbs','firstSort'));
+
+        return $this->render('category', compact('cats', 'crumbs', 'firstSort'));
+    }
+
+    private function getParentCat() {
+        $catsCash = yii::$app->cache->get('parentCategory');
+        if ($catsCash) {
+            return $catsCash;
+        }
+        $cats = Category::find()->with(['children', 'parent'])->where(['parent_id' => null])->all();
+        yii::$app->cache->set('parentCategory', $cats, 60 * 60);
+        return $cats;
     }
 
     private function generateBreadcrumbs($cats) {
-        if(isset($cats->parent)){
+        if (isset($cats->parent)) {
             $curArr = [];
-            $curArr = array_merge($curArr , $this->generateBreadcrumbs($cats->parent) );
-            $curArr = array_merge($curArr , [['label' => $cats->name, 'url' =>$cats->url]] );
+            $curArr = array_merge($curArr, $this->generateBreadcrumbs($cats->parent));
+            $curArr = array_merge($curArr, [['label' => $cats->name, 'url' => $cats->url]]);
             return $curArr;
-        }else{
-            return [['label' => $cats->name, 'url' =>$cats->url]];
+        } else {
+            return [['label' => $cats->name, 'url' => $cats->url]];
         }
-        
     }
+
 }

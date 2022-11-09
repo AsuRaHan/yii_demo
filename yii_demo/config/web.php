@@ -5,12 +5,17 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
-    'language'=>'ru',
+    'language' => 'ru',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
+    ],
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -49,11 +54,10 @@ $config = [
             'enableStrictParsing' => false,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index',
+                '' => 'site/category',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],
-        
     ],
     'params' => $params,
 ];
@@ -83,7 +87,7 @@ if (YII_ENV_DEV) {
             ],
         ],
     ];
-    
+
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => \yii\gii\Module::className(),
