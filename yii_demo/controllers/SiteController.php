@@ -124,16 +124,18 @@ class SiteController extends Controller {
         $id = Yii::$app->request->get('category_id');
         $cats =[];
         $crumbs = [];
+        $firstSort = false;
         if(!$id){
-            $cats = Category::find()->with('children')->where(['parent_id' => null])->all();
+            $cats = Category::find()->with(['children','parent'])->where(['parent_id' => null])->all();
+            $firstSort = false;
         }else{
-            $cats = Category::find()->with('children')->where(['id' => $id])->all();
+            $cats = Category::find()->with(['children','parent'])->where(['id' => $id])->all();
             $crumbs = $this->generateBreadcrumbs($cats[0]);
             $cats = $cats[0]->children;
+            $firstSort = true;
         }
         
-
-        return $this->render('category', compact('cats','crumbs'));
+        return $this->render('category', compact('cats','crumbs','firstSort'));
     }
 
     private function generateBreadcrumbs($cats) {

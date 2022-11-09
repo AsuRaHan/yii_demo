@@ -32,7 +32,7 @@ function renderCat($cats,$sort = false){
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
-        <?php renderCat($cats);  ?>
+        <?php renderCat($cats,$firstSort);  ?>
     
     <code><?= __FILE__ ?></code>
 </div>
