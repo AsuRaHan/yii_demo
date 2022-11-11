@@ -5,6 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
+    'name'=>'yii demo',
     'language' => 'ru',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -15,6 +16,7 @@ $config = [
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
+            'layout' => 'admin'
         ],
     ],
     'components' => [
