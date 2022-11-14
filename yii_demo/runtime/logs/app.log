@@ -1,0 +1,3650 @@
+2022-11-12 14:23:28 [172.21.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:23:27 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    '_csrf' => '3acec66c2341140cbdfc4ef69e75b929e8c71df5bf8a2d658ae2d70b470d51e5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ntNR6m363LtT3nThk01F0AlCWAqlFbi4\";}'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'b4dd2c93fbb6183b6bf01276450d7c85'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; _csrf=3acec66c2341140cbdfc4ef69e75b929e8c71df5bf8a2d658ae2d70b470d51e5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ntNR6m363LtT3nThk01F0AlCWAqlFbi4%22%3B%7D; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=b4dd2c93fbb6183b6bf01276450d7c85; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39362'
+    'REDIRECT_URL' => '/web/user-management/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-management/auth/login'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263007.0639
+    'REQUEST_TIME' => 1668263007
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:23:29 [172.21.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/vendor/webvimark/module-user-management/views/layouts/loginLayout.php:30
+    in /var/www/html/vendor/webvimark/components/BaseController.php:38
+    in /var/www/html/vendor/webvimark/module-user-management/controllers/AuthController.php:61
+2022-11-12 14:23:29 [172.21.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:23:28 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    '_csrf' => '3acec66c2341140cbdfc4ef69e75b929e8c71df5bf8a2d658ae2d70b470d51e5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ntNR6m363LtT3nThk01F0AlCWAqlFbi4\";}'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'b4dd2c93fbb6183b6bf01276450d7c85'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; _csrf=3acec66c2341140cbdfc4ef69e75b929e8c71df5bf8a2d658ae2d70b470d51e5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ntNR6m363LtT3nThk01F0AlCWAqlFbi4%22%3B%7D; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=b4dd2c93fbb6183b6bf01276450d7c85; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39362'
+    'REDIRECT_URL' => '/web/user-management/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/user-management/auth/login'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263008.1429
+    'REQUEST_TIME' => 1668263008
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:23:59 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:23:58 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'giuyYdJd0JwQzPOMQfKlE2w1_Vjmh3PVZ0BIku01cvXqWsgUviez8EWHud0tseciDUerb9TOH-wOKnDxukELwA=='
+    'LoginForm' => [
+        'username' => 'a.plotnikov'
+        'password' => '3goxLF%Yfh5B'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'b4dd2c93fbb6183b6bf01276450d7c85'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+    '_csrf' => '0a212aaba657df1877f1fb19178f05ba2a85d8af72f51718e443e00ce2adce4ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hqzulzclUKJQlCB1arV72Il9ij8cWty5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '229'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/user-management/auth/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=b4dd2c93fbb6183b6bf01276450d7c85; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D; _csrf=0a212aaba657df1877f1fb19178f05ba2a85d8af72f51718e443e00ce2adce4ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hqzulzclUKJQlCB1arV72Il9ij8cWty5%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39390'
+    'REDIRECT_URL' => '/web/user-management/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/user-management/auth/login'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263038.0227
+    'REQUEST_TIME' => 1668263038
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:24:00 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:24:00 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:23:59 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_REFERER' => 'http://localhost/web/user-management/auth/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39390'
+    'REDIRECT_URL' => '/web/user-management/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-management/auth/login'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263039.7251
+    'REQUEST_TIME' => 1668263039
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:24:19 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/vendor/webvimark/components/BaseController.php:38
+    in /var/www/html/controllers/UserController.php:45
+2022-11-12 14:24:19 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:24:17 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/user-management/auth/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39420'
+    'REDIRECT_URL' => '/web/user/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/user/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263057.6413
+    'REQUEST_TIME' => 1668263057
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:24:22 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PolyclinicsController.php:29
+2022-11-12 14:24:22 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:24:21 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39430'
+    'REDIRECT_URL' => '/web/polyclinics/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/polyclinics/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263061.5394
+    'REQUEST_TIME' => 1668263061
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:24:25 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:24:25 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:24:24 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/polyclinics/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39430'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263064.797
+    'REQUEST_TIME' => 1668263064
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:24:31 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/vendor/webvimark/components/BaseController.php:38
+    in /var/www/html/controllers/UserController.php:45
+2022-11-12 14:24:31 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:24:30 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39430'
+    'REDIRECT_URL' => '/web/user/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/user/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263070.547
+    'REQUEST_TIME' => 1668263070
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:24:37 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:24:37 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:24:36 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'pmaUser-1' => '{\"iv\":\"qC6CWg3QKoT10\\/oRat\\/CAQ==\",\"mac\":\"196b9da99a7a78829e62dff80a32f1e1d0ccf96b\",\"payload\":\"BN4GmqgZoyEoDVjl5513Fg==\"}'
+    'pmaAuth-1' => '{\"iv\":\"YTMYA0mWNfiP+H1xXISgAA==\",\"mac\":\"731cddca56b9974153a56f08696cb3ded7fdcd89\",\"payload\":\"yzjMvOtzK8zQnG6\\/fCtvoCv3svm44uKSQhonqm7izwE=\"}'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; pmaUser-1=%7B%22iv%22%3A%22qC6CWg3QKoT10%5C%2FoRat%5C%2FCAQ%3D%3D%22%2C%22mac%22%3A%22196b9da99a7a78829e62dff80a32f1e1d0ccf96b%22%2C%22payload%22%3A%22BN4GmqgZoyEoDVjl5513Fg%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22YTMYA0mWNfiP%2BH1xXISgAA%3D%3D%22%2C%22mac%22%3A%22731cddca56b9974153a56f08696cb3ded7fdcd89%22%2C%22payload%22%3A%22yzjMvOtzK8zQnG6%5C%2FfCtvoCv3svm44uKSQhonqm7izwE%3D%22%7D; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39430'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263076.6428
+    'REQUEST_TIME' => 1668263076
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:28:20 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:20 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:19 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => '1'
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=1&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=1&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263299.0855
+    'REQUEST_TIME' => 1668263299
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=1&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:23 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:23 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:22 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => '2'
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=1&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=2&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=2&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263302.4348
+    'REQUEST_TIME' => 1668263302
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=2&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:25 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:25 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:25 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => '3'
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=2&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=3&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=3&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263305.2185
+    'REQUEST_TIME' => 1668263305
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=3&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:28 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:28 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:27 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => '4'
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=3&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=4&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=4&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263307.8287
+    'REQUEST_TIME' => 1668263307
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=4&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:32 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:32 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:31 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => '5'
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=4&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=5&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=5&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263311.7393
+    'REQUEST_TIME' => 1668263311
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=5&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:35 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:35 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:34 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=5&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263314.7543
+    'REQUEST_TIME' => 1668263314
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:38 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:38 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:37 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => '3'
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=3&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=3&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263317.3586
+    'REQUEST_TIME' => 1668263317
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=3&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:40 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:40 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:39 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => '2'
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=3&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=2&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=2&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263319.8577
+    'REQUEST_TIME' => 1668263319
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=2&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:43 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:43 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:43 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=2&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263322.9751
+    'REQUEST_TIME' => 1668263322
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:48 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:48 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:47 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => '1'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=1'
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=1'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263327.6398
+    'REQUEST_TIME' => 1668263327
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=1'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:52 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:52 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:51 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => '2'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=2'
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=2'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263331.8446
+    'REQUEST_TIME' => 1668263331
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=2'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:55 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:55 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:54 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => '3'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=3'
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=3'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263334.4419
+    'REQUEST_TIME' => 1668263334
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=3'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:28:58 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:28:58 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:28:57 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => '4'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=4'
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=4'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263337.7979
+    'REQUEST_TIME' => 1668263337
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=4'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:29:00 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:29:00 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:00 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263340.0189
+    'REQUEST_TIME' => 1668263340
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    ]
+    'argc' => 1
+]
+2022-11-12 14:29:03 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:29:03 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:02 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+    'sort' => 'diagnosis_date'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=diagnosis_date'
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=diagnosis_date'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263342.5389
+    'REQUEST_TIME' => 1668263342
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=diagnosis_date'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:29:04 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:29:04 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:04 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+    'sort' => '-diagnosis_date'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=diagnosis_date'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=-diagnosis_date'
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=-diagnosis_date'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263344.1713
+    'REQUEST_TIME' => 1668263344
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=-diagnosis_date'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:29:07 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:29:07 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:06 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+    'sort' => 'updated'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=-diagnosis_date'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=updated'
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=updated'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263346.5951
+    'REQUEST_TIME' => 1668263346
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=updated'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:29:08 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:29:08 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:08 [172.21.0.1][9][-][info][application] $_GET = [
+    'PatientSearch' => [
+        'name' => ''
+        'phone' => ''
+        'polyclinic_id' => ''
+        'status_id' => ''
+        'treatment_id' => ''
+        'form_disease_id' => ''
+    ]
+    'sort' => '-updated'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=updated'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=-updated'
+    'REQUEST_URI' => '/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=-updated'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263348.0667
+    'REQUEST_TIME' => 1668263348
+    'argv' => [
+        0 => 'PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=-updated'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:29:33 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/vendor/webvimark/components/BaseController.php:38
+    in /var/www/html/controllers/UserController.php:45
+2022-11-12 14:29:33 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:32 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/?PatientSearch%5Bname%5D=&PatientSearch%5Bphone%5D=&PatientSearch%5Bpolyclinic_id%5D=&PatientSearch%5Bstatus_id%5D=&PatientSearch%5Btreatment_id%5D=&PatientSearch%5Bform_disease_id%5D=&sort=-updated'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39572'
+    'REDIRECT_URL' => '/web/user/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/user/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263372.1
+    'REQUEST_TIME' => 1668263372
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:29:52 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PolyclinicsController.php:29
+2022-11-12 14:29:52 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:51 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39600'
+    'REDIRECT_URL' => '/web/polyclinics/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/polyclinics/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263391.7142
+    'REQUEST_TIME' => 1668263391
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:29:56 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:29:56 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:55 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/polyclinics/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39600'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263395.8828
+    'REQUEST_TIME' => 1668263395
+    'argv' => []
+    'argc' => 0
+]
+2022-11-12 14:30:02 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:146
+2022-11-12 14:30:02 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:29:59 [172.21.0.1][9][-][info][application] $_GET = [
+    'id' => '33'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39600'
+    'REDIRECT_URL' => '/web/patientss/update'
+    'REDIRECT_QUERY_STRING' => 'id=33'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=33'
+    'REQUEST_URI' => '/web/patientss/update?id=33'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263399.0839
+    'REQUEST_TIME' => 1668263399
+    'argv' => [
+        0 => 'id=33'
+    ]
+    'argc' => 1
+]
+2022-11-12 14:30:19 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/html/views/layouts/main.php:86
+    in /var/www/html/controllers/PatientssController.php:45
+2022-11-12 14:30:19 [172.21.0.1][9][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-11-12 14:30:18 [172.21.0.1][9][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'pma_lang' => 'ru'
+    'phpMyAdmin' => '70974613e27df7f752f093bf50bc9262'
+    'PHPSESSID' => 'e93d3cb5891f0ea331696f27d0f15f9c'
+    '_identity' => '9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[9,\"qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ\",2592000]\";}'
+    '_csrf' => 'e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JejIBAhJd85myRFG-foVkY5vYhgGD8Yb\";}'
+    'pmaUser-1' => '{\"iv\":\"11d0D2sKEx3HFVdHJHDoEQ==\",\"mac\":\"22c88a48c14443919413bd553398ad68768883d8\",\"payload\":\"opp14ByvpEql7uploAibYQ==\"}'
+    'pmaAuth-1' => '{\"iv\":\"56XelERxwlEQ7Uioz0c87w==\",\"mac\":\"c85ae66f71051a4c7abec35fda02eff5415e2f31\",\"payload\":\"sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU=\"}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'worugu'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => 'http://localhost/user-management/auth/login'
+    '_um_last_attempt' => 1668263038
+    '_um_attempt_count' => 1
+    '__id' => 9
+    '__authKey' => 'qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ'
+    '__auth_last_update' => 1668263039
+    '__userRoles' => [
+        0 => 'user'
+    ]
+    '__userPermissions' => [
+        0 => 'user2'
+    ]
+    '__userRoutes' => [
+        0 => '/patientss/*'
+        1 => '/patientss/captcha'
+        2 => '/patientss/captcha'
+        3 => '/patientss/create'
+        4 => '/patientss/create'
+        5 => '/patientss/delete'
+        6 => '/patientss/delete'
+        7 => '/patientss/error'
+        8 => '/patientss/error'
+        9 => '/patientss/index'
+        10 => '/patientss/index'
+        11 => '/patientss/update'
+        12 => '/patientss/update'
+        13 => '/patientss/view'
+        14 => '/patientss/view'
+        15 => '/site/*'
+        16 => '/site/about'
+        17 => '/site/captcha'
+        18 => '/site/contact'
+        19 => '/site/error'
+        20 => '/site/index'
+        21 => '/site/login'
+        22 => '/site/logout'
+    ]
+    '__visitorToken' => '636fac7f8d730'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/web/patientss/update?id=33'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'pma_lang=ru; phpMyAdmin=70974613e27df7f752f093bf50bc9262; PHPSESSID=e93d3cb5891f0ea331696f27d0f15f9c; _identity=9a3ae8a60e6f34f7b4ac59fd05043784282bd9f2319442421b46b4ef6b1deefaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ%22%2C2592000%5D%22%3B%7D; _csrf=e71ce42e27e727ccefd0378b44cb372a6e1004c79a7cfa0a4ec19962eb25d668a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JejIBAhJd85myRFG-foVkY5vYhgGD8Yb%22%3B%7D; pmaUser-1=%7B%22iv%22%3A%2211d0D2sKEx3HFVdHJHDoEQ%3D%3D%22%2C%22mac%22%3A%2222c88a48c14443919413bd553398ad68768883d8%22%2C%22payload%22%3A%22opp14ByvpEql7uploAibYQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%2256XelERxwlEQ7Uioz0c87w%3D%3D%22%2C%22mac%22%3A%22c85ae66f71051a4c7abec35fda02eff5415e2f31%22%2C%22payload%22%3A%22sII2mfKX5vIkOf4drgc1c0C9sqpQCswIRbGVfK2pcHU%3D%22%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.21.0.4'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REMOTE_PORT' => '39640'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1668263418.1576
+    'REQUEST_TIME' => 1668263418
+    'argv' => []
+    'argc' => 0
+]
