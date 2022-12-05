@@ -1,6 +1,7 @@
 <?php
 
 namespace app\modules\admin\controllers;
+
 use app\modules\admin\controllers\AdminController;
 use app\models\authors;
 use app\models\AuthorSearch;
@@ -10,23 +11,22 @@ use yii\filters\VerbFilter;
 /**
  * AuthorController implements the CRUD actions for authors model.
  */
-class AuthorController extends AdminController
-{
+class AuthorController extends AdminController {
+
     /**
      * @inheritDoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return array_merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-                        'delete' => ['POST'],
+                parent::behaviors(),
+                [
+                    'verbs' => [
+                        'class' => VerbFilter::className(),
+                        'actions' => [
+                            'delete' => ['POST'],
+                        ],
                     ],
-                ],
-            ]
+                ]
         );
     }
 
@@ -35,14 +35,13 @@ class AuthorController extends AdminController
      *
      * @return string
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new AuthorSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -52,10 +51,9 @@ class AuthorController extends AdminController
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+                    'model' => $this->findModel($id),
         ]);
     }
 
@@ -64,8 +62,7 @@ class AuthorController extends AdminController
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new authors();
 
         if ($this->request->isPost) {
@@ -77,7 +74,7 @@ class AuthorController extends AdminController
         }
 
         return $this->render('create', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -88,8 +85,7 @@ class AuthorController extends AdminController
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
@@ -97,7 +93,7 @@ class AuthorController extends AdminController
         }
 
         return $this->render('update', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -108,8 +104,7 @@ class AuthorController extends AdminController
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id)
-    {
+    public function actionDelete($id) {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -122,12 +117,29 @@ class AuthorController extends AdminController
      * @return authors the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = authors::findOne(['id' => $id])) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
     }
+
+    public function actionList($q = null, $id = null) {
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+//        return [1=>$q,2=>$id];
+        $list = Authors::find()->select(['id', 'name', 'surname', 'patronymic'])
+                        ->where(['like', 'name', '%' . $q . '%', false])
+                        ->orWhere(['like', 'surname', '%' . $q . '%', false])
+                        ->orWhere(['like', 'patronymic', '%' . $q . '%', false])
+                        ->indexBy('id')->asArray()->all();
+        $result = [];
+        foreach ($list as $value) {
+            $result[] = ['id' => $value['id'], 'text' => $value['name'] . ' ' . $value['patronymic'] . ' ' . $value['surname']];
+//            $result[$value['id']] = $value['name'] . ' '. $value['surname'];
+        }
+
+        return ['results' => $result];
+    }
+
 }

@@ -11,7 +11,7 @@ use yii\web\JsExpression;
 /** @var yii\widgets\ActiveForm $form */
 //dd($model->authors);
 
-$url = \yii\helpers\Url::to(['/site/list']);
+$url = \yii\helpers\Url::to(['/admin/author/list']);
 // Get the initial saved city data (note $model->city is an array of city ids)
 $dataList = Authors::find()->andWhere(['id' => $model->authors])->all();
 $data = \yii\helpers\ArrayHelper::map($dataList, 'id', 'name');
