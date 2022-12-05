@@ -1,53 +1,71 @@
 <?php
-
 /** @var yii\web\View $this */
-
 $this->title = 'My Yii Application';
 ?>
-<div class="site-index">
+<script src="https://unpkg.com/vue@next"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <div class="jumbotron text-center bg-transparent">
-        <h1 class="display-4">Congratulations!</h1>
+<div id="counter">
+    Счётчик: {{ counter }}
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+    <div id="event-handling">
+        <p>{{ message }}</p>
+        <button v-on:click="getUsers">getUsers</button>
     </div>
 
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
+    <h1>Список users</h1>
+    <ul>
+        <li v-for="user in users" :key="user.id">
+            <a href="#" class="" @click="viewUserDetails(user.id)">{{user.username}}</a>
+        </li>
+    </ul>
 </div>
+
+<script>
+const Counter = {
+    data() {
+        return {
+            counter: 0,
+            message: 'Привет, Vue.js!',
+            users: [],
+        }
+    },
+    mounted() {
+//        setInterval(() => {
+//            this.counter++;
+//        }, 1000);
+    },
+    methods: {
+        viewUserDetails(id) {
+            console.log(id);
+        },
+        getUsers() {
+            let user = {
+                username: 'test',
+                email: 'gjkdj@rgdfv.trd',
+                password_hash: 'ferferdhtrht'
+            };
+            fetch('/admin/user?access-token=<?= Yii::$app->user->identity->access_token ?? '1d1267c904dbf78ddb2ad3a5f44848029' ?>', {
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+//                mode: 'cors',
+                method: 'GET',
+//                cache: 'no-cache',
+//                credentials: 'same-origin',
+//                credentials: 'include',
+//                body: JSON.stringify(user)
+            }).then(res => res.json())
+                    .then(res => {
+                        this.users = res.data;
+                        console.log(res.data);
+                    })
+                    .catch((e) => {
+                        console.log(e);
+                    });
+        }
+    }
+}
+
+Vue.createApp(Counter).mount('#counter');
+</script>

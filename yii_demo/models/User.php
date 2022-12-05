@@ -2,93 +2,98 @@
 
 namespace app\models;
 
-class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
-{
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
+use Yii;
+use yii\db\ActiveRecord;
+use yii\web\IdentityInterface;
+use yii\behaviors\TimestampBehavior;
 
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
+class User extends ActiveRecord implements IdentityInterface {
 
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function findIdentity($id)
-    {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+    public function behaviors() {
+        return [
+            TimestampBehavior::class,
+        ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function findIdentityByAccessToken($token, $type = null)
-    {
-        foreach (self::$users as $user) {
-            if ($user['accessToken'] === $token) {
-                return new static($user);
-            }
+// отбрасываем некоторые поля. Лучше всего использовать в случае наследования
+    public function fields() {
+        $fields = parent::fields();
+
+        // удаляем небезопасные поля
+        unset($fields['auth_key'], 
+                $fields['password_hash'], 
+                $fields['access_token'], 
+                $fields['password_reset_token']
+                );
+
+        return $fields;
+    }
+    public function getUserRole() {
+        $roles = Yii::$app->authManager->getRolesByUser($this->id);
+
+        $role = '';
+
+        foreach ($roles as $key => $value) {
+            $role = $key;
         }
 
-        return null;
+        return $role;
+    }
+
+    public static function tableName() {
+        return 'user';
     }
 
     /**
-     * Finds user by username
+     * Finds an identity by the given ID.
      *
-     * @param string $username
-     * @return static|null
+     * @param string|int $id the ID to be looked for
+     * @return IdentityInterface|null the identity object that matches the given ID.
      */
-    public static function findByUsername($username)
-    {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
-
-        return null;
+    public static function findIdentity($id) {
+        return static::findOne($id);
     }
 
     /**
-     * {@inheritdoc}
+     * Finds an identity by the given token.
+     *
+     * @param string $token the token to be looked for
+     * @return IdentityInterface|null the identity object that matches the given token.
      */
-    public function getId()
-    {
+    public static function findIdentityByAccessToken($token, $type = null) {
+        return static::findOne(['access_token' => $token]);
+    }
+
+    /**
+     * Finds user by name.
+     *
+     * @param string $userName
+     * @return User|null
+     */
+    public static function findByUsername($userName) {
+        return static::findOne(['username' => $userName]);
+    }
+
+    /**
+     * @return int|string current user ID
+     */
+    public function getId() {
         return $this->id;
     }
 
     /**
-     * {@inheritdoc}
+     * @return string current user auth key
      */
-    public function getAuthKey()
-    {
-        return $this->authKey;
+    public function getAuthKey() {
+        return $this->auth_key;
     }
 
     /**
-     * {@inheritdoc}
+     * @param string $authKey
+     * @return bool if auth key is valid for current user
      */
-    public function validateAuthKey($authKey)
-    {
-        return $this->authKey === $authKey;
+    public function validateAuthKey($authKey) {
+        return $this->getAuthKey() === $authKey;
     }
 
     /**
@@ -97,8 +102,8 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      * @param string $password password to validate
      * @return bool if password provided is valid for current user
      */
-    public function validatePassword($password)
-    {
-        return $this->password === $password;
+    public function validatePassword($password) {
+        return Yii::$app->getSecurity()->validatePassword($password, $this->password_hash);
     }
+
 }

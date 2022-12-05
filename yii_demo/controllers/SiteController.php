@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Category;
+use app\models\Authors;
 
 class SiteController extends Controller {
 
@@ -32,7 +33,7 @@ class SiteController extends Controller {
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['post', 'get'],
                 ],
             ],
         ];
@@ -60,6 +61,23 @@ class SiteController extends Controller {
      */
     public function actionIndex() {
         return $this->render('index');
+    }
+
+    public function actionList($q = null, $id = null) {
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+//        return [1=>$q,2=>$id];
+        $list = Authors::find()->select(['id','name','surname','patronymic'])
+                ->where(['like', 'name','%'. $q .'%', false])
+                ->orWhere(['like', 'surname','%'. $q .'%', false])
+                ->orWhere(['like', 'patronymic','%'. $q .'%', false])
+                ->indexBy('id')->asArray()->all();
+        $result=[];
+        foreach ($list as $value) {
+            $result[]=['id'=>$value['id'],'text'=>$value['name'] . ' '. $value['patronymic'] . ' '. $value['surname']];
+//            $result[$value['id']] = $value['name'] . ' '. $value['surname'];
+        }
+        
+        return ['results'=>$result];
     }
 
     /**

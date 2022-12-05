@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\base\Model;
+use app\models\User;
 
 /**
  * LoginForm is the model behind the login form.
@@ -11,20 +12,17 @@ use yii\base\Model;
  * @property-read User|null $user
  *
  */
-class LoginForm extends Model
-{
+class LoginForm extends Model {
+
     public $username;
     public $password;
     public $rememberMe = true;
-
     private $_user = false;
-
 
     /**
      * @return array the validation rules.
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             // username and password are both required
             [['username', 'password'], 'required'],
@@ -42,8 +40,7 @@ class LoginForm extends Model
      * @param string $attribute the attribute currently being validated
      * @param array $params the additional name-value pairs given in the rule
      */
-    public function validatePassword($attribute, $params)
-    {
+    public function validatePassword($attribute, $params) {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
 
@@ -57,10 +54,15 @@ class LoginForm extends Model
      * Logs in a user using the provided username and password.
      * @return bool whether the user is logged in successfully
      */
-    public function login()
-    {
+    public function login() {
         if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600*24*30 : 0);
+            $user = $this->getUser();
+            $is_login = Yii::$app->user->login($user, $this->rememberMe ? 3600 * 24 * 30 : 0);
+            if ($is_login) {
+                $user->access_token = md5(time());
+                $user->save();
+            }
+            return $is_login;
         }
         return false;
     }
@@ -70,12 +72,12 @@ class LoginForm extends Model
      *
      * @return User|null
      */
-    public function getUser()
-    {
+    public function getUser() {
         if ($this->_user === false) {
             $this->_user = User::findByUsername($this->username);
         }
 
         return $this->_user;
     }
+
 }
