@@ -59,7 +59,7 @@ class LoginForm extends Model {
             $user = $this->getUser();
             $is_login = Yii::$app->user->login($user, $this->rememberMe ? 3600 * 24 * 30 : 0);
             if ($is_login) {
-                $user->access_token = md5(time());
+                $user->access_token = Yii::$app->security->generateRandomString();
                 $user->save();
             }
             return $is_login;

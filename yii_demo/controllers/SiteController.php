@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Authors;
 use app\models\BookSearch;
+use app\models\SignupForm;
 use Yii;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
@@ -14,7 +15,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Category;
 use app\models\Book;
-
+use app\models\PasswordResetRequestForm;
+use app\models\ResetPasswordForm;
 class SiteController extends Controller {
 
     /**
@@ -92,7 +94,7 @@ class SiteController extends Controller {
                 return $this->redirect(['site/search']);
             }
             $query = urlencode(Yii::$app->request->post('query'));
-            return $this->redirect(['site/search/query/'.$query]);
+            return $this->redirect(['site/search/query/' . $query]);
         }
 
         $page = (int)$page;
@@ -102,7 +104,7 @@ class SiteController extends Controller {
 
         return $this->render(
             'search',
-            compact('books', 'pages','query')
+            compact('books', 'pages', 'query')
         );
     }
 
@@ -164,43 +166,65 @@ class SiteController extends Controller {
         return $this->render('about');
     }
 
-    public function actionCategory() {
-        $id = Yii::$app->request->get('category_id');
-        $cats = [];
-        $crumbs = [];
-        $firstSort = false;
-        if (!$id) {
-            $cats = $this->getParentCat();
-            $firstSort = false;
-        } else {
-            $cats = Category::find()->with(['children', 'parent'])->where(['id' => $id])->all();
-            $crumbs = $this->generateBreadcrumbs($cats[0]);
-            $cats = $cats[0]->children;
-            $firstSort = true;
+    public function actionSignup() {
+        $model = new SignupForm();
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
         }
 
-        return $this->render('category', compact('cats', 'crumbs', 'firstSort'));
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
     }
+    /**
+     * Requests password reset.
+     *
+     * @return mixed
+     */
+    public function actionRequestPasswordReset()
+    {
+        $model = new PasswordResetRequestForm();
 
-    private function getParentCat() {
-        $catsCash = yii::$app->cache->get('parentCategory');
-        if ($catsCash) {
-            return $catsCash;
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail()) {
+                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                return $this->goHome();
+            } else {
+                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.');
+            }
         }
-        $cats = Category::find()->with(['children', 'parent'])->where(['parent_id' => null])->all();
-        yii::$app->cache->set('parentCategory', $cats, 60 * 60);
-        return $cats;
+
+        return $this->render('requestPasswordResetToken', [
+            'model' => $model,
+        ]);
     }
 
-    private function generateBreadcrumbs($cats) {
-        if (isset($cats->parent)) {
-            $curArr = [];
-            $curArr = array_merge($curArr, $this->generateBreadcrumbs($cats->parent));
-            $curArr = array_merge($curArr, [['label' => $cats->name, 'url' => $cats->url]]);
-            return $curArr;
-        } else {
-            return [['label' => $cats->name, 'url' => $cats->url]];
+    /**
+     * Resets password.
+     *
+     * @param string $token
+     * @return mixed
+     * @throws BadRequestHttpException
+     */
+    public function actionResetPassword($token)
+    {
+        try {
+            $model = new ResetPasswordForm($token);
+        } catch (InvalidParamException $e) {
+            throw new BadRequestHttpException($e->getMessage());
         }
-    }
 
+        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
+            Yii::$app->session->setFlash('success', 'New password was saved.');
+            return $this->goHome();
+        }
+
+        return $this->render('resetPassword', [
+            'model' => $model]);
+      }
 }
