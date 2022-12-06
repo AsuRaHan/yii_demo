@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Authors;
+use app\models\BookSearch;
 use Yii;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
@@ -62,17 +63,12 @@ class SiteController extends Controller {
      * @return string
      */
     public function actionIndex() {
-//        $book = Book::find()->where(['id' => 1])->one();
-//        $author = Authors::find()->where(['id' => 2])->one();
-//        dd($bk->books);
-
         $query = Book::find();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'forcePageParam' => false, 'pageSizeParam' => false]);
         $models = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
-
         return $this->render('index', [
             'models' => $models,
             'pages' => $pages,
@@ -82,19 +78,10 @@ class SiteController extends Controller {
     public function actionBook() {
         $id = yii::$app->request->get('id');
         $book = Book::find()->where(['id' => $id])->one();
-//        dd($book);
         return $this->render('book', ['book' => $book]);
     }
 
-    /**
-     * Результаты поиска по каталогу товаров
-     */
     public function actionSearch($query = '', $page = 1) {
-        /*
-         * Чтобы получить ЧПУ, выполняем редирект на site/search/query/одежда
-         * после отправки поискового запроса из формы методом POST. Если строка
-         * поискового запроса пустая, выполняем редирект на catalog/search.
-         */
         if (Yii::$app->request->isPost) {
             $query = Yii::$app->request->post('query');
             if (is_null($query)) {
@@ -110,12 +97,12 @@ class SiteController extends Controller {
 
         $page = (int)$page;
 
-        // получаем результаты поиска с постраничной навигацией
-        list($products, $pages) = (new Book())->getSearchResult($query, $page);
+        // результаты поиска с постраничной навигацией
+        list($books, $pages) = (new BookSearch())->getSearchResult($query, $page);
 
         return $this->render(
             'search',
-            compact('products', 'pages','query')
+            compact('books', 'pages','query')
         );
     }
 

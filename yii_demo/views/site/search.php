@@ -13,11 +13,11 @@ use \yii\bootstrap5\LinkPager;
 <?=$this->render('searchform',['query'=>$query]);?>
 
 
-<?php if (!empty($products)): ?>
+<?php if (!empty($books)): ?>
     <h2>Результаты поиска</h2>
     <div class="d-flex flex-wrap mb-3">
 
-        <?php foreach ($products as $product): ?>
+        <?php foreach ($books as $product): ?>
 
             <div class="card m-2" style="width: 19rem;">
                 <img src="<?= $product['image'] ?>" class="card-img-top" alt="...">

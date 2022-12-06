@@ -5,6 +5,8 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\book;
+use yii\data\Pagination;
+use yii\db\Query;
 
 /**
  * BookSearch represents the model behind the search form of `app\models\book`.
@@ -69,5 +71,56 @@ class BookSearch extends book
             ->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;
+    }
+
+    public function getSearchResult($search, $page) {
+        $search = $this->cleanSearchString($search);
+        if (empty($search)) {
+            return [null, null];
+        }
+        $key = 'search-'.md5($search).'-page-'.$page;
+        $data = \Yii::$app->cache->get($key);
+
+        if ($data === false) {
+            $words = explode(' ', $search);
+            $relevance = "IF (`name` LIKE '%" . $words[0] . "%', 2, 0)";
+            $relevance .= " + IF (`description` LIKE '%" . $words[0] . "%', 1, 0)";
+            for ($i = 1; $i < count($words); $i++) {
+                $relevance .= " + IF (`name` LIKE '%" . $words[$i] . "%', 2, 0)";
+                $relevance .= " + IF (`description` LIKE '%" . $words[$i] . "%', 1, 0)";
+            }
+            $query = (new Query())
+                ->select(['*', 'relevance' => $relevance])
+                ->from('book')
+                ->where(['like', 'name', $words[0]])
+                ->orWhere(['like', 'description', $words[0]]);
+            for ($i = 1; $i < count($words); $i++) {
+                $query = $query->orWhere(['like', 'name', $words[$i]]);
+                $query = $query->orWhere(['like', 'description', $words[$i]]);
+            }
+            $query = $query->orderBy(['relevance' => SORT_DESC]);
+            $pages = new Pagination([
+                'totalCount' => $query->count(),
+                'pageSize' => 20,
+                'forcePageParam' => false,
+                'pageSizeParam' => false
+            ]);
+            $books = $query
+                ->offset($pages->offset)
+                ->limit($pages->limit)
+                ->all();
+            $data = [$books, $pages];
+            \Yii::$app->cache->set($key, $data);
+        }
+
+        return $data;
+    }
+
+    protected function cleanSearchString($search) {
+        $search = iconv_substr($search, 0, 64);
+        $search = preg_replace('#[^0-9a-zA-ZА-Яа-яёЁ]#u', ' ', $search);
+        $search = preg_replace('#\s+#u', ' ', $search);
+        $search = trim($search);
+        return $search;
     }
 }

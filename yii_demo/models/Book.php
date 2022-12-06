@@ -16,7 +16,7 @@ use yii\db\Query;
  * @property string $name
  * @property string|null $description
  * @property string|null $isbn
- * @property resource|null $image
+ * @property string|null $image
  */
 class Book extends \yii\db\ActiveRecord {
 
@@ -105,71 +105,5 @@ class Book extends \yii\db\ActiveRecord {
     public function afterFind() {
         $this->authors = AuthorsVsBooks::find()->select('author_id')->where(['book_id' => $this->id])->column();
         parent::afterFind();
-    }
-    /**
-     * Результаты поиска по каталогу товаров
-     */
-    public function getSearchResult($search, $page) {
-        $search = $this->cleanSearchString($search);
-        if (empty($search)) {
-            return [null, null];
-        }
-
-        // пробуем извлечь данные из кеша
-        $key = 'search-'.md5($search).'-page-'.$page;
-        $data = Yii::$app->cache->get($key);
-
-        if ($data === false) { // данных нет в кеше, получаем их заново
-            // разбиваем поисковый запрос на отдельные слова
-            $words = explode(' ', $search);
-            // рассчитываем релевантность для каждого товара
-            $relevance = "IF (`name` LIKE '%" . $words[0] . "%', 2, 0)";
-            $relevance .= " + IF (`description` LIKE '%" . $words[0] . "%', 1, 0)";
-            for ($i = 1; $i < count($words); $i++) {
-                $relevance .= " + IF (`name` LIKE '%" . $words[$i] . "%', 2, 0)";
-                $relevance .= " + IF (`description` LIKE '%" . $words[$i] . "%', 1, 0)";
-            }
-            $query = (new Query())
-                ->select(['*', 'relevance' => $relevance])
-                ->from('book')
-                ->where(['like', 'name', $words[0]])
-                ->orWhere(['like', 'description', $words[0]]);
-            for ($i = 1; $i < count($words); $i++) {
-                $query = $query->orWhere(['like', 'name', $words[$i]]);
-                $query = $query->orWhere(['like', 'description', $words[$i]]);
-            }
-            // сортируем разультаты по убыванию релевантности
-            $query = $query->orderBy(['relevance' => SORT_DESC]);
-            // постраничная навигация
-            $pages = new Pagination([
-                'totalCount' => $query->count(),
-                'pageSize' => 20, //Yii::$app->params['pageSize'],
-                'forcePageParam' => false,
-                'pageSizeParam' => false
-            ]);
-            $products = $query
-                ->offset($pages->offset)
-                ->limit($pages->limit)
-                ->all();
-            // сохраняем полученные данные в кеше
-            $data = [$products, $pages];
-            Yii::$app->cache->set($key, $data);
-        }
-
-        return $data;
-    }
-
-    /**
-     * Вспомогательная функция, очищает строку поискового запроса с сайта
-     * от всякого мусора
-     */
-    protected function cleanSearchString($search) {
-        $search = iconv_substr($search, 0, 64);
-        // удаляем все, кроме букв и цифр
-        $search = preg_replace('#[^0-9a-zA-ZА-Яа-яёЁ]#u', ' ', $search);
-        // сжимаем двойные пробелы
-        $search = preg_replace('#\s+#u', ' ', $search);
-        $search = trim($search);
-        return $search;
     }
 }
