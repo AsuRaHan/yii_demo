@@ -66,14 +66,15 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
-                '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+
                 // правило для 2, 3, 4 страницы результатов поиска
                 'site/search/query/<query:.*?>/page/<page:\d+>' => 'site/search',
                 // правило для первой страницы результатов поиска
                 'site/search/query/<query:.*?>' => 'site/search',
                 // правило для первой страницы с пустым запросом
                 'site/search' => 'site/search',
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
+                '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+                //['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
             ],
         ],
     ],
