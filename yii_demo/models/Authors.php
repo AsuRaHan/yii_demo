@@ -67,7 +67,12 @@ class Authors extends \yii\db\ActiveRecord
     {
         return $this->hasMany(AuthorsVsBooks::class, ['author_id' => 'id']);
     }
-    
+
+    public function getBooks()
+    {
+        return $this->hasMany(Book::class, ['id' => 'book_id'])->viaTable(AuthorsVsBooks::tableName(), ['author_id' => 'id']);
+    }
+
     public static function getAllAuthors() {
         return self::find()->select(['name'])->indexBy('id')->column();
     }

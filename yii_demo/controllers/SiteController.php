@@ -2,7 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\Authors;
 use Yii;
+use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -10,7 +12,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Category;
-use app\models\Authors;
+use app\models\Book;
 
 class SiteController extends Controller {
 
@@ -60,10 +62,62 @@ class SiteController extends Controller {
      * @return string
      */
     public function actionIndex() {
-        return $this->render('index');
+//        $book = Book::find()->where(['id' => 1])->one();
+//        $author = Authors::find()->where(['id' => 2])->one();
+//        dd($bk->books);
+
+        $query = Book::find();
+        $countQuery = clone $query;
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'forcePageParam' => false, 'pageSizeParam' => false]);
+        $models = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+
+        return $this->render('index', [
+            'models' => $models,
+            'pages' => $pages,
+        ]);
     }
 
+    public function actionBook() {
+        $id = yii::$app->request->get('id');
+        $book = Book::find()->where(['id' => $id])->one();
+//        dd($book);
+        return $this->render('book', ['book' => $book]);
+    }
 
+    /**
+     * Результаты поиска по каталогу товаров
+     */
+    public function actionSearch($query = '', $page = 1) {
+        /*
+         * Чтобы получить ЧПУ, выполняем редирект на site/search/query/одежда
+         * после отправки поискового запроса из формы методом POST. Если строка
+         * поискового запроса пустая, выполняем редирект на catalog/search.
+         */
+        if (Yii::$app->request->isPost) {
+            $query = Yii::$app->request->post('query');
+            if (is_null($query)) {
+                return $this->redirect(['site/search']);
+            }
+            $query = trim($query);
+            if (empty($query)) {
+                return $this->redirect(['site/search']);
+            }
+            $query = urlencode(Yii::$app->request->post('query'));
+            return $this->redirect(['site/search/query/'.$query]);
+        }
+
+        $page = (int)$page;
+
+        // получаем результаты поиска с постраничной навигацией
+        list($products, $pages) = (new Book())->getSearchResult($query, $page);
+
+        return $this->render(
+            'search',
+            compact('products', 'pages','query')
+        );
+    }
 
     /**
      * Login action.
@@ -82,7 +136,7 @@ class SiteController extends Controller {
 
         $model->password = '';
         return $this->render('login', [
-                    'model' => $model,
+            'model' => $model,
         ]);
     }
 
@@ -110,7 +164,7 @@ class SiteController extends Controller {
             return $this->refresh();
         }
         return $this->render('contact', [
-                    'model' => $model,
+            'model' => $model,
         ]);
     }
 

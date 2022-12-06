@@ -29,8 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
     GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+//            ['class' => 'yii\grid\SerialColumn'],
             'id',
 //            'user_is',
             [
@@ -43,18 +44,23 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'description:ntext',
             'isbn',
+//            [
+//                'attribute' => 'image',
+//                'format' => 'raw',
+//                'value' => function ($data) {
+//                    $temp = Html::img($data->getImageBlob());
+////                    dd($temp);composer require --prefer-dist yiisoft/yii2-imagine "*"
+//                    return $temp;
+//                },
+//            ],
             [
                 'label' => 'Authors',
                 'attribute' => 'authors',
                 'value' => function($data) {
                     return $data->getAuthorsName();
-                },
-//                'filter' => [
-//                    0 => 'Нет',
-//                    1 => 'Да'
-//                ]
+                }
             ],
-            //'image',
+
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, book $model, $key, $index, $column) {
@@ -62,6 +68,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
         ],
+        'pager' => [
+            'class' => 'yii\bootstrap5\LinkPager'
+        ]
     ]);
     ?>
 

@@ -20,7 +20,7 @@ $data = \yii\helpers\ArrayHelper::map($dataList, 'id', 'name');
 
 <div class="book-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'user_is')->textInput() ?>
 
@@ -51,8 +51,9 @@ $data = \yii\helpers\ArrayHelper::map($dataList, 'id', 'name');
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'isbn')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'image')->textInput() ?>
+    <?=''// $form->field($model, 'image')->fileInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>

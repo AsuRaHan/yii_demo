@@ -13,21 +13,18 @@ use Yii;
  *
  * @property Authors $author
  */
-class AuthorsVsBooks extends \yii\db\ActiveRecord
-{
+class AuthorsVsBooks extends \yii\db\ActiveRecord {
     /**
      * {@inheritdoc}
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'authors_vs_books';
     }
 
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['author_id', 'book_id'], 'required'],
             [['author_id', 'book_id'], 'integer'],
@@ -38,8 +35,7 @@ class AuthorsVsBooks extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => Yii::t('app', 'ID'),
             'author_id' => Yii::t('app', 'Author ID'),
@@ -52,8 +48,10 @@ class AuthorsVsBooks extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getAuthor()
-    {
-        return $this->hasOne(Authors::class, ['id' => 'author_id']);
+    public function getAuthors() {
+        return $this->hasMany(Authors::class, ['id' => 'author_id']);
+    }
+    public function getBook() {
+        return $this->hasOne(Book::class, ['id' => 'book_id']);
     }
 }

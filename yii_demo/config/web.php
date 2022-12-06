@@ -27,6 +27,10 @@ $config = [
                 'application/json' => 'yii\web\JsonParser',
             ]
         ],
+        'image' => [
+            'class' => 'yii\image\ImageDriver',
+            'driver' => 'Imagick',  //GD or Imagick
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -63,6 +67,12 @@ $config = [
             'rules' => [
                 '' => 'site/index',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+                // правило для 2, 3, 4 страницы результатов поиска
+                'site/search/query/<query:.*?>/page/<page:\d+>' => 'site/search',
+                // правило для первой страницы результатов поиска
+                'site/search/query/<query:.*?>' => 'site/search',
+                // правило для первой страницы с пустым запросом
+                'site/search' => 'site/search',
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
             ],
         ],

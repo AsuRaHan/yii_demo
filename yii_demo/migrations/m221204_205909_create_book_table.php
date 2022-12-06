@@ -20,7 +20,7 @@ class m221204_205909_create_book_table extends Migration {
             'name' => $this->string()->notNull(),
             'description' => $this->text(),
             'isbn' => $this->string(),
-            'image' => $this->binary()
+            'image' => $this->string()
         ]);
     }
 

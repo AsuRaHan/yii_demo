@@ -20,14 +20,15 @@ class User extends ActiveRecord implements IdentityInterface {
         $fields = parent::fields();
 
         // удаляем небезопасные поля
-        unset($fields['auth_key'], 
-                $fields['password_hash'], 
-                $fields['access_token'], 
-                $fields['password_reset_token']
-                );
+        unset($fields['auth_key'],
+            $fields['password_hash'],
+            $fields['access_token'],
+            $fields['password_reset_token']
+        );
 
         return $fields;
     }
+
     public function getUserRole() {
         $roles = Yii::$app->authManager->getRolesByUser($this->id);
 

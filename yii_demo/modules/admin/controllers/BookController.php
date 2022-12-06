@@ -5,19 +5,20 @@ namespace app\modules\admin\controllers;
 use app\models\book;
 use app\models\BookSearch;
 use app\modules\admin\controllers\AdminController;
+use Imagine\Gd\Image;
+use Imagine\Image\Box;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * BookController implements the CRUD actions for book model.
  */
-class BookController extends AdminController
-{
+class BookController extends AdminController {
     /**
      * @inheritDoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return array_merge(
             parent::behaviors(),
             [
@@ -36,8 +37,7 @@ class BookController extends AdminController
      *
      * @return string
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new BookSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
@@ -53,8 +53,7 @@ class BookController extends AdminController
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -65,8 +64,7 @@ class BookController extends AdminController
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new book();
 
         if ($this->request->isPost) {
@@ -89,12 +87,20 @@ class BookController extends AdminController
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost && $model->load($this->request->post())) {
+//            $uploadedFile = UploadedFile::getInstance($model, 'image');
+//            Image::getImagine()->open($uploadedFile->tempName)->thumbnail(new Box(200, 300))->save($uploadedFile->tempName , ['quality' => 90]);
+//            $image=\Yii::$app->image->load($uploadedFile->tempName);
+//            $image->resize(200, NULL, NULL);
+//            $image->save($uploadedFile->tempName,  80);
+//            $model->image = file_get_contents($uploadedFile->tempName);
+//            dd($model->image);
+            if($model->save()){
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
@@ -109,8 +115,7 @@ class BookController extends AdminController
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id)
-    {
+    public function actionDelete($id) {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -123,8 +128,7 @@ class BookController extends AdminController
      * @return book the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = book::findOne(['id' => $id])) !== null) {
             return $model;
         }

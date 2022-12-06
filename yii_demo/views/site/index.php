@@ -1,71 +1,39 @@
 <?php
+
+use \yii\bootstrap5\LinkPager;
+
 /** @var yii\web\View $this */
-$this->title = 'My Yii Application';
+/** @var app\models\Book $models */
+/** @var yii\data\Pagination $pages */
+$this->title = 'My Yii Books';
+
 ?>
-<script src="https://unpkg.com/vue@next"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<div id="counter">
-    Счётчик: {{ counter }}
 
-    <div id="event-handling">
-        <p>{{ message }}</p>
-        <button v-on:click="getUsers">getUsers</button>
-    </div>
+<?=$this->render('searchform',['query'=>'']);?>
 
-    <h1>Список users</h1>
-    <ul>
-        <li v-for="user in users" :key="user.id">
-            <a href="#" class="" @click="viewUserDetails(user.id)">{{user.username}}</a>
-        </li>
-    </ul>
+<div class="d-flex flex-wrap mb-3">
+
+    <?php foreach ($models as $model) : ?>
+
+        <div class="card m-2" style="width: 19rem;">
+            <img src="<?= $model->image ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><?= $model->name ?></h5>
+                <p class="card-text"><?= $model->description ?></p>
+
+            </div>
+            <div class="card-footer">
+                <a href="<?= \yii\helpers\Url::to(['/site/book', 'id' => $model->id]) ?>" class="btn btn-success">Go</a>
+            </div>
+        </div>
+
+    <?php endforeach; ?>
+
 </div>
+<div class="d-flex justify-content-center">
+    <?= LinkPager::widget([
+        'pagination' => $pages,
 
-<script>
-const Counter = {
-    data() {
-        return {
-            counter: 0,
-            message: 'Привет, Vue.js!',
-            users: [],
-        }
-    },
-    mounted() {
-//        setInterval(() => {
-//            this.counter++;
-//        }, 1000);
-    },
-    methods: {
-        viewUserDetails(id) {
-            console.log(id);
-        },
-        getUsers() {
-            let user = {
-                username: 'test',
-                email: 'gjkdj@rgdfv.trd',
-                password_hash: 'ferferdhtrht'
-            };
-            fetch('/admin/user?access-token=<?= Yii::$app->user->identity->access_token ?? '1d1267c904dbf78ddb2ad3a5f44848029' ?>', {
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-//                mode: 'cors',
-                method: 'GET',
-//                cache: 'no-cache',
-//                credentials: 'same-origin',
-//                credentials: 'include',
-//                body: JSON.stringify(user)
-            }).then(res => res.json())
-                    .then(res => {
-                        this.users = res.data;
-                        console.log(res.data);
-                    })
-                    .catch((e) => {
-                        console.log(e);
-                    });
-        }
-    }
-}
-
-Vue.createApp(Counter).mount('#counter');
-</script>
+    ]); ?>
+</div>
