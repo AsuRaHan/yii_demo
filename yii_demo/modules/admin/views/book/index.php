@@ -31,40 +31,43 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         
         'columns' => [
-//            ['class' => 'yii\grid\SerialColumn'],
-            'id',
-//            'user_is',
-            [
-                'label' => 'Book in user',
-//                'attribute' => 'user_is',
-                'value' => function($data) {
-                    return $data->getUserName();
-                },
-            ],
-            'name',
-            'description:ntext',
-            'isbn',
-//            [
-//                'attribute' => 'image',
-//                'format' => 'raw',
-//                'value' => function ($data) {
-//                    $temp = Html::img($data->getImageBlob());
-////                    dd($temp);composer require --prefer-dist yiisoft/yii2-imagine "*"
-//                    return $temp;
-//                },
-//            ],
-            [
-                'label' => 'Authors',
-                'attribute' => 'authors',
-                'value' => function($data) {
-                    return $data->getAuthorsName();
-                }
-            ],
-
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, book $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
+                }
+            ],
+//            'id',
+//            'user_is',
+//            [
+//                'label' => 'Book in user',
+////                'attribute' => 'user_is',
+//                'value' => function($data) {
+//                    return '';//$data->getUserName();
+//                },
+//            ],
+            'name',
+            'description:ntext',
+            'isbn',
+            [
+                'attribute' => 'image',
+                'format' => 'raw',
+                'value' => function ($data) {
+                    $temp = Html::img($data->image,[
+                        'alt' => 'pic not found',
+                        'width' => '60px',
+//                        'height' => '20px'
+                    ]);
+//                    dd($temp);composer require --prefer-dist yiisoft/yii2-imagine "*"
+                    return $temp;
+                },
+            ],
+            [
+                'label' => 'Authors',
+                'attribute' => 'authors',
+                'format' => 'raw',
+                'value' => function($data) {
+                    return $data->getAuthorsName();
                 }
             ],
         ],

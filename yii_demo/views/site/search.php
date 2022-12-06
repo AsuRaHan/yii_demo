@@ -1,7 +1,4 @@
 <?php
-/*
- * Страница результатов поиска по каталогу, файл views/catalog/search.php
- */
 
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -36,9 +33,9 @@ use \yii\bootstrap5\LinkPager;
 
     </div>
     <div class="d-flex justify-content-center">
-        <?= LinkPager::widget(['pagination' => $pages]); /* постраничная навигация */ ?>
+        <?= LinkPager::widget(['pagination' => $pages]); ?>
     </div>
 <?php else: ?>
-    <h2>Hичего не найдено.</h2>
+    <h2>Hи чего не найдено.</h2>
 <?php endif; ?>
 

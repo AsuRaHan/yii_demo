@@ -39,7 +39,6 @@ class Book extends \yii\db\ActiveRecord {
             [['description', 'image'], 'string'],
             [['name', 'isbn'], 'string', 'max' => 255],
             [['authors'], 'safe'], // !!!
-            [['author'], 'safe'], // !!!
         ];
     }
 
@@ -55,12 +54,7 @@ class Book extends \yii\db\ActiveRecord {
             'isbn' => Yii::t('app', 'ISBN'),
             'image' => Yii::t('app', 'Image'),
             'authors' => Yii::t('app', 'Authors'), // !!!
-            'author' => Yii::t('app', 'Author'), // !!!
         ];
-    }
-
-    public function getImageBlob() {
-        return 'data:image/jpeg;base64,' . base64_encode($this->image);
     }
 
     public function afterSave($insert, $changedAttributes) { // !!!
@@ -96,14 +90,11 @@ class Book extends \yii\db\ActiveRecord {
     public function getAuthor() {
         return $this->hasMany(Authors::class, ['id' => 'author_id'])->viaTable(AuthorsVsBooks::tableName(), ['book_id' => 'id']); // '{{%authors_vs_books}}'
     }
-
+    public function getAuthorIds() {
+        return $this->authors = AuthorsVsBooks::find()->select('author_id')->where(['book_id' => $this->id])->column();
+    }
     public function getUserName() {
         $avb = User::find()->where(['id' => $this->user_is])->one();
         return $avb ? $avb->username : 'No';
-    }
-
-    public function afterFind() {
-        $this->authors = AuthorsVsBooks::find()->select('author_id')->where(['book_id' => $this->id])->column();
-        parent::afterFind();
     }
 }

@@ -17,7 +17,7 @@ $this->title = 'My Yii Books';
     <?php foreach ($models as $model) : ?>
 
         <div class="card m-2" style="width: 19rem;">
-            <img src="<?= $model->image ?>" class="card-img-top" alt="...">
+            <img src="<?= $model->image ?:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Noimage.svg/739px-Noimage.svg.png' ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?= $model->name ?></h5>
                 <p class="card-text"><?= $model->description ?></p>

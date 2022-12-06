@@ -13,9 +13,10 @@ use yii\web\JsExpression;
 
 $url = \yii\helpers\Url::to(['/admin/author/list']);
 // Get the initial saved city data (note $model->city is an array of city ids)
-$dataList = Authors::find()->andWhere(['id' => $model->authors])->all();
+$dataList = Authors::find()->andWhere(['id' => $model->getAuthorIds()])->all();
+//dd($dataList);
 $data = \yii\helpers\ArrayHelper::map($dataList, 'id', 'name');
-
+//dd($data);
 ?>
 
 <div class="book-form">
