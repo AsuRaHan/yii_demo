@@ -96,7 +96,7 @@ class ApiController extends Controller {
      *                     property="password",
      *                     type="string"
      *                 ),
-     *                 example={"username": "root", "password": "root"}
+     *                 example={"username": "tester", "password": "123456"}
      *             )
      *         )
      *     ),
