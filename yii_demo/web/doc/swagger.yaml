@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: 'Book API'
+  version: '0.1'
+paths:
+  /api/get-access-token:
+    post:
+      tags:
+        - Student
+      summary: 'Получить токен доступа в API'
+      operationId: eb7771196a969283379e691647c6ac73
+      requestBody:
+        description: 'Данные пользователя'
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 'Вернет access-token доступа'
+          content:
+            application/json:
+              schema:
+                type: object
+        '409':
+          description: 'Неудачный запрос'
+          content:
+            application/json:
+              schema:
+                type: string
+                default: 'Не верный логин или пароль'

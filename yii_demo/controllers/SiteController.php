@@ -6,8 +6,10 @@ use app\models\Authors;
 use app\models\BookSearch;
 use app\models\SignupForm;
 use Yii;
+use yii\base\InvalidParamException;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
+use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
@@ -17,6 +19,7 @@ use app\models\Category;
 use app\models\Book;
 use app\models\PasswordResetRequestForm;
 use app\models\ResetPasswordForm;
+
 class SiteController extends Controller {
 
     /**
@@ -26,10 +29,10 @@ class SiteController extends Controller {
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['logout'],
+                'only' => ['logout','checkout'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout','checkout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -77,37 +80,6 @@ class SiteController extends Controller {
         ]);
     }
 
-    public function actionBook() {
-        $id = yii::$app->request->get('id');
-        $book = Book::find()->where(['id' => $id])->one();
-        return $this->render('book', ['book' => $book]);
-    }
-
-    public function actionSearch($query = '', $page = 1) {
-        if (Yii::$app->request->isPost) {
-            $query = Yii::$app->request->post('query');
-            if (is_null($query)) {
-                return $this->redirect(['site/search']);
-            }
-            $query = trim($query);
-            if (empty($query)) {
-                return $this->redirect(['site/search']);
-            }
-            $query = urlencode(Yii::$app->request->post('query'));
-            return $this->redirect(['site/search/query/' . $query]);
-        }
-
-        $page = (int)$page;
-
-        // результаты поиска с постраничной навигацией
-        list($books, $pages) = (new BookSearch())->getSearchResult($query, $page);
-
-        return $this->render(
-            'search',
-            compact('books', 'pages', 'query')
-        );
-    }
-
     /**
      * Login action.
      *
@@ -136,7 +108,6 @@ class SiteController extends Controller {
      */
     public function actionLogout() {
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
 
@@ -181,13 +152,13 @@ class SiteController extends Controller {
             'model' => $model,
         ]);
     }
+
     /**
      * Requests password reset.
      *
      * @return mixed
      */
-    public function actionRequestPasswordReset()
-    {
+    public function actionRequestPasswordReset() {
         $model = new PasswordResetRequestForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
@@ -211,8 +182,7 @@ class SiteController extends Controller {
      * @return mixed
      * @throws BadRequestHttpException
      */
-    public function actionResetPassword($token)
-    {
+    public function actionResetPassword($token) {
         try {
             $model = new ResetPasswordForm($token);
         } catch (InvalidParamException $e) {
@@ -226,5 +196,48 @@ class SiteController extends Controller {
 
         return $this->render('resetPassword', [
             'model' => $model]);
-      }
+    }
+
+    public function actionBook() {
+        $book = Book::findOne(yii::$app->request->get('id'));
+        if(!$book){
+            Yii::$app->session->setFlash('id_book_error', "Book ID not found");
+            return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
+        }
+        return $this->render('bookInfo', ['book' => $book]);
+    }
+
+    public function actionSearch($query = '', $page = 1) {
+        if (Yii::$app->request->isPost) {
+            $query = Yii::$app->request->post('query');
+            if (is_null($query)) {
+                return $this->redirect(['site/search']);
+            }
+            $query = trim($query);
+            if (empty($query)) {
+                return $this->redirect(['site/search']);
+            }
+            $query = urlencode(Yii::$app->request->post('query'));
+            return $this->redirect(['site/search/query/' . $query]);
+        }
+
+        $page = (int)$page;
+
+        // результаты поиска с постраничной навигацией
+        list($books, $pages) = (new BookSearch())->getSearchResult($query, $page);
+
+        return $this->render(
+            'search',
+            compact('books', 'pages', 'query')
+        );
+    }
+
+    public function actionCheckout() {
+        $book = Book::findOne(yii::$app->request->get('id'));
+        if(!$book){
+            Yii::$app->session->setFlash('id_book_error', "Book ID not found");
+            return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
+        }
+        return $this->render('checkout',['book' => $book]);
+    }
 }

@@ -12,6 +12,13 @@ $this->title = 'My Yii Books';
 
 <?=$this->render('searchform',['query'=>'']);?>
 
+<?php if(Yii::$app->session->hasFlash('id_book_error')):?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error:</strong> <?= Yii::$app->session->getFlash('id_book_error'); ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
 <div class="d-flex flex-wrap mb-3">
 
     <?php foreach ($models as $model) : ?>
