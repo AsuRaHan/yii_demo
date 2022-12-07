@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\User;
 use yii\filters\AccessControl;
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBasicAuth;
@@ -13,10 +14,10 @@ use yii\filters\Cors;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Response;
-
+use Yii;
 
 /**
- * @OA\Info(title="Book API", version="0.1")
+ * @OA\Info(title="Books library API", version="0.1")
  */
 class ApiController extends Controller {
     public $enableCsrfValidation = false;
@@ -24,7 +25,6 @@ class ApiController extends Controller {
     public function init() {
         parent::init();
         \Yii::$app->user->enableSession = false;
-//        $this->enableCsrfValidation = false;
     }
 
     public function behaviors() {
@@ -34,21 +34,18 @@ class ApiController extends Controller {
         $behaviors['verbs'] = [
             'class' => VerbFilter::class,
             'actions' => [
-                'get-access-token' => ['post'],
+                'get-access-token' => ['post', 'put'],
             ],
         ];
         $behaviors['access'] = [
             'class' => AccessControl::class,
             'rules' => [
                 [
-                    'actions' => ['get-access-token'],
+//                    'actions' => ['test'],
                     'allow' => true,
-                    'roles' => ['@', '?'],
+
                 ],
-//                [
-//                    'allow' => true,
-//                    'roles' => ['admin'],
-//                ],
+
             ],
         ];
 
@@ -61,10 +58,7 @@ class ApiController extends Controller {
 
         $behaviors['authenticator'] = [
             'class' => QueryParamAuth::class,
-//            'class' => CompositeAuth::class,
-//            'authMethods' => [
-//                QueryParamAuth::class,
-//            ],
+            'except' => ['get-access-token'],
         ];
 
 //        $behaviors['corsFilter' ] = [
@@ -88,18 +82,24 @@ class ApiController extends Controller {
     /**
      * @OA\Post(
      *     path="/api/get-access-token",
-     *     tags={"Student"},
+     *     tags={"auth"},
      *     summary="Получить токен доступа в API",
      *     @OA\RequestBody(
-     *          description="Данные пользователя",
-     *          required=true,
-     *          @OA\MediaType(
-     *              mediaType="application/json",
-     *              @OA\Schema(
-     *                  type="object",
-     *              ),
-     *          )
-     *      ),
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                     property="username",
+     *                     type="string"
+     *                 ),
+     *                 @OA\Property(
+     *                     property="password",
+     *                     type="string"
+     *                 ),
+     *                 example={"username": "root", "password": "root"}
+     *             )
+     *         )
+     *     ),
      *     @OA\Response(
      *          response="200",
      *          description="Вернет access-token доступа",
@@ -126,6 +126,46 @@ class ApiController extends Controller {
      * @return Response
      */
     public function actionGetAccessToken() {
-        return [1, 2, 3, 45, 67, 8, 5];
+
+        $data = Yii::$app->request->getBodyParams();
+
+        if(!isset($data['username'])){
+            Yii::$app->response->statusCode = 409;
+            $result =  ['error' => 'username not set in param'];
+            return Controller::asJson($result);
+        }
+
+        if(!isset($data['password'])){
+            Yii::$app->response->statusCode = 409;
+            $result =  ['error' => 'password not set in param'];
+            return Controller::asJson($result);
+        }
+
+        $user = User::findByUsername($data['username']);
+        if(!$user){
+            $result =  ['error' => 'user not found'];
+            Yii::$app->response->statusCode = 409;
+            return Controller::asJson($result);
+        }
+
+        if(!$user->validatePassword($data['password'])){
+            $result =  ['error' => 'user password is wrong'];
+            Yii::$app->response->statusCode = 409;
+            return Controller::asJson($result);
+        }
+
+        $is_login = Yii::$app->user->login($user);
+        if ($is_login) {
+            $user->access_token = Yii::$app->security->generateRandomString();
+            $user->save();
+        }
+
+        $result =  ['access_token' => yii::$app->user->identity->access_token];
+        return Controller::asJson($result);
+    }
+
+    public function actionTest() {
+        $data = \Yii::$app->request->post();;
+        return $data;
     }
 }

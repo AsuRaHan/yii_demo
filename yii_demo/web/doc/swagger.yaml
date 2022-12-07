@@ -1,21 +1,27 @@
 openapi: 3.0.0
 info:
-  title: 'Book API'
+  title: 'Books library API'
   version: '0.1'
 paths:
   /api/get-access-token:
     post:
       tags:
-        - Student
+        - auth
       summary: 'Получить токен доступа в API'
       operationId: eb7771196a969283379e691647c6ac73
       requestBody:
-        description: 'Данные пользователя'
-        required: true
         content:
           application/json:
             schema:
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
               type: object
+              example:
+                username: root
+                password: root
       responses:
         '200':
           description: 'Вернет access-token доступа'

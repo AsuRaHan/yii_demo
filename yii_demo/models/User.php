@@ -24,7 +24,7 @@ class User extends ActiveRecord implements IdentityInterface {
         // удаляем небезопасные поля
         unset($fields['auth_key'],
             $fields['password_hash'],
-            $fields['access_token'],
+//            $fields['access_token'],
             $fields['password_reset_token']
         );
 
