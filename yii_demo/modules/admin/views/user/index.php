@@ -29,23 +29,65 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-            'id',
-            'username',
-//            'auth_key',
-//            'password_hash',
-//            'password_reset_token',
-            //'access_token',
+//            ['class' => 'yii\grid\SerialColumn'],
+//            'id',
+//            'username',
+            [
+                'attribute' => 'username',
+                'format' => 'raw',
+                'value' => function ($model, $key, $index, $column) {
+                    /** @var User $model */
+                    return Html::a(Html::encode($model->username), ['view', 'id' => $model->id]);
+                }
+            ],
             'email:email',
-            'status',
+            [
+                'filter' => User::getStatusesArray(),
+                'attribute' => 'status',
+                'format' => 'raw',
+                'value' => function ($model, $key, $index, $column) {
+                    /** @var User $model */
+                    /** @var \yii\grid\DataColumn $column */
+                    $value = $model->{$column->attribute};
+                    switch ($value) {
+                        case User::STATUS_ACTIVE:
+                            $class = 'success';
+                            break;
+                        case User::STATUS_WAIT:
+                            $class = 'warning';
+                            break;
+                        case User::STATUS_DELETED:
+                            $class = 'secondary';
+                            break;
+                        case User::STATUS_BLOCKED:
+                        default:
+                            $class = 'default';
+                    };
+                    $html = Html::tag('span', Html::encode($model->getStatusName()), ['class' => 'badge bg-' . $class]);
+                    return $value === null ? $column->grid->emptyCell : $html;
+                }
+            ],
             [
                 'label' => Yii::t('app', 'Role'),
                 'value' => 'userRole',
             ],
-            'created_at:datetime',
-            'updated_at:datetime',
             [
-                'class' => ActionColumn::className(),
+                'filter' => \kartik\date\DatePicker::widget([
+                    'model' => $searchModel,
+                    'attribute' => 'date_from',
+                    'attribute2' => 'date_to',
+                    'type' => \kartik\date\DatePicker::TYPE_RANGE,
+                    'separator' => '-',
+                    'pluginOptions' => ['format' => 'yyyy-mm-dd']
+                ]),
+                'attribute' => 'created_at',
+                'format' => 'datetime',
+            ],
+//            'created_at:datetime',
+//            'updated_at:datetime',
+            [
+                'class' => ActionColumn::class,
+                'contentOptions' => ['style' => 'white-space: nowrap; text-align: center; letter-spacing: 0.1em; max-width: 7em;'],
                 'urlCreator' => function ($action, User $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                 }
@@ -57,6 +99,6 @@ $this->params['breadcrumbs'][] = $this->title;
     ]);
     ?>
 
-<?php Pjax::end(); ?>
+    <?php Pjax::end(); ?>
 
 </div>

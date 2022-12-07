@@ -30,7 +30,10 @@ class m221203_140717_create_user_table extends Migration {
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
-                ], $tableOptions);
+        ], $tableOptions);
+
+        $this->createIndex('idx-user-username', '{{%user}}', 'username', true);
+        $this->createIndex('idx-user-email', '{{%user}}', 'email', true);
     }
 
     /**

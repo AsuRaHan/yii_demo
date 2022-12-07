@@ -1,6 +1,7 @@
 <?php
 
 /** @var yii\web\View $this */
+
 /** @var string $content */
 
 use app\assets\AppAsset;
@@ -46,9 +47,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '@w
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
-        $menuItems[] = ['label' => 'Admin', 'url' => ['/admin']];
-        if(YII_ENV=='dev'){
-            $menuItems[] = ['label' => 'Gii', 'url' => ['/gii']];
+        if (\Yii::$app->user->can('admin')) {
+            $menuItems[] = ['label' => 'Admin', 'url' => ['/admin']];
+            if (YII_ENV == 'dev') {
+                $menuItems[] = ['label' => 'Gii', 'url' => ['/gii']];
+            }
         }
         $menuItems[] = ['label' => 'Logout (' . Yii::$app->user->identity->username . ')', 'url' => ['/site/logout']];
     }

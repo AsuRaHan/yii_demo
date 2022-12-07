@@ -73,7 +73,12 @@ $config = [
                 'site/search/query/<query:.*?>' => 'site/search',
                 // правило для первой страницы с пустым запросом
                 'site/search' => 'site/search',
-                '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+//                '<_m:[\w\-]+>/<_c:[\w\-]+>/<id:\d+>' => '<_m>/<_c>/view',
+//                '<_m:[\w\-]+>/<_c:[\w\-]+>/<id:\d+>/<_a:[\w\-]+>' => '<_m>/<_c>/<_a>',
+//                '<_m:[\w\-]+>' => '<_m>/default/index',
+//                '<_m:[\w\-]+>/<_c:[\w\-]+>' => '<_m>/<_c>/index',
+
+//                '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
                 //['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
             ],
         ],

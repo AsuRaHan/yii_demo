@@ -201,7 +201,7 @@ class SiteController extends Controller {
     public function actionBook() {
         $book = Book::findOne(yii::$app->request->get('id'));
         if(!$book){
-            Yii::$app->session->setFlash('id_book_error', "Book ID not found");
+            Yii::$app->session->setFlash('error', "Book ID not found");
             return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
         }
         return $this->render('bookInfo', ['book' => $book]);
@@ -235,7 +235,7 @@ class SiteController extends Controller {
     public function actionCheckout() {
         $book = Book::findOne(yii::$app->request->get('id'));
         if(!$book){
-            Yii::$app->session->setFlash('id_book_error', "Book ID not found");
+            Yii::$app->session->setFlash('error', "Book ID not found");
             return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
         }
         return $this->render('checkout',['book' => $book]);

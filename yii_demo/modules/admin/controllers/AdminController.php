@@ -7,19 +7,19 @@ use yii\filters\AccessControl;
 
 class AdminController extends Controller
 {
-    public function behaviors() {
-        return [
-            'access' => [
-                'class' => AccessControl::class,
-                'rules' => [
-                    [
-                        'allow' => true,
-//                        'actions' => ['index', 'lol'],
-                        'roles' => ['admin'],
-                    ],
-                ],
-            ],
-        ];
-    }
+//    public function behaviors() {
+//        return [
+//            'access' => [
+//                'class' => AccessControl::class,
+//                'rules' => [
+//                    [
+//                        'allow' => true,
+////                        'actions' => ['index', 'lol'],
+//                        'roles' => ['admin'],
+//                    ],
+//                ],
+//            ],
+//        ];
+//    }
 
 }

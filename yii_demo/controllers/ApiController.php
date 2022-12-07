@@ -108,9 +108,9 @@ class ApiController extends Controller {
      *              @OA\Schema(
      *                  type="object",
      *              ),
+     *              example={"access_token": "N3s7HMsYpYF5D4-l9M7gyrK8F0qWek2K"}
      *          )
-     *      )
-     * ,
+     *      ),
      *     @OA\Response(
      *          response="409",
      *          description="Неудачный запрос",
@@ -120,6 +120,7 @@ class ApiController extends Controller {
      *                  type="string",
      *                  default="Не верный логин или пароль"
      *              ),
+     *              example={"error": "user not found"}
      *          )
      *      )
      * )

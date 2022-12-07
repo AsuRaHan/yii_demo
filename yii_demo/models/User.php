@@ -4,11 +4,14 @@ namespace app\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 use yii\behaviors\TimestampBehavior;
 
 class User extends ActiveRecord implements IdentityInterface {
-    const STATUS_DELETED = 0;
+    const STATUS_DELETED = -1;
+    const STATUS_BLOCKED = 0;
+    const STATUS_WAIT = 2;
     const STATUS_ACTIVE = 10;
 
     public function behaviors() {
@@ -16,7 +19,34 @@ class User extends ActiveRecord implements IdentityInterface {
             TimestampBehavior::class,
         ];
     }
+    public function getStatusName()
+    {
+        return ArrayHelper::getValue(self::getStatusesArray(), $this->status);
+    }
 
+    public static function getStatusesArray()
+    {
+        return [
+            self::STATUS_DELETED => Yii::t('app', 'DELETED'),
+            self::STATUS_BLOCKED => Yii::t('app', 'BLOCKED'),
+            self::STATUS_WAIT => Yii::t('app', 'WAIT'),
+            self::STATUS_ACTIVE => Yii::t('app', 'ACTIVE'),
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if ($insert) {
+                $this->generateAuthKey();
+            }
+            return true;
+        }
+        return false;
+    }
 // отбрасываем некоторые поля. Лучше всего использовать в случае наследования
     public function fields() {
         $fields = parent::fields();
