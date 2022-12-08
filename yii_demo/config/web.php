@@ -69,7 +69,7 @@ $config = [
             'enableStrictParsing' => false,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index',
+//                '' => 'site/index',
 
                 // правило для 2, 3, 4 страницы результатов поиска
                 'site/search/query/<query:.*?>/page/<page:\d+>' => 'site/search',
@@ -77,13 +77,23 @@ $config = [
                 'site/search/query/<query:.*?>' => 'site/search',
                 // правило для первой страницы с пустым запросом
                 'site/search' => 'site/search',
+
+                '/api/books-list' => '/api/books-list',
+                '/admin' => '/admin',
+                '/admin/user/update' => '/admin/user/update',
+                '/admin/user/view' => '/admin/user/view',
+                '/admin/book/update' => '/admin/book/update',
+                '/admin/book/view' => '/admin/book/view',
+                '/admin/author/view' => '/admin/author/view',
+                '/admin/author/update' => '/admin/author/update',
 //                '<_m:[\w\-]+>/<_c:[\w\-]+>/<id:\d+>' => '<_m>/<_c>/view',
 //                '<_m:[\w\-]+>/<_c:[\w\-]+>/<id:\d+>/<_a:[\w\-]+>' => '<_m>/<_c>/<_a>',
 //                '<_m:[\w\-]+>' => '<_m>/default/index',
 //                '<_m:[\w\-]+>/<_c:[\w\-]+>' => '<_m>/<_c>/index',
 
-//                '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'book'],
+                '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+//                ['class' => 'yii\rest\UrlRule', 'controller' => 'book'],
+                '<url:(.*)>' => 'site/index', // if SPA APP only
             ],
         ],
     ],

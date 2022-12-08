@@ -13,9 +13,11 @@
         :margin-pages="2"
         :click-handler="clickCallback"
         :prev-text="'Prev'"
+        :prev-class="'cursor-pointer'"
+        :next-class="'cursor-pointer'"
         :next-text="'Next'"
         :container-class="'pagination'"
-        :page-class="'page-item'"
+        :page-class="'page-item cursor-pointer'"
     >
     </paginate>
   </div>
@@ -81,7 +83,7 @@ export default {
       this.$router.push({name: 'book-item', params: {bookId}});
     },
     async clickCallback(p) {
-
+      console.log('Start ajax');
       let retData = await api.helpPost(
           'books-list',
           {"offset":(p - 1) * this.perPage,"limit":this.perPage}
@@ -95,6 +97,7 @@ export default {
 
   },
   async mounted() {
+    console.log(window.user_access_token);
     let retData = await api.helpPost('books-list');
     console.log('ret', retData);
     this.books = retData.list;
