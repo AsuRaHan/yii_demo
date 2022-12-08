@@ -6,7 +6,9 @@ php yii migrate --migrationPath=@yii/rbac/migrations
 
 php yii migrate
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RFKo-WI1B7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Watch the video](https://www.youtube.com/embed/RFKo-WI1B7E)](https://www.youtube.com/embed/RFKo-WI1B7E)
+
+https://www.youtube.com/embed/RFKo-WI1B7E
 
 
 Создать сервис библиотеки с возможностью добавлять  читателей и книги и передачи книги на чтение.  
