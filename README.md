@@ -6,10 +6,6 @@ php yii migrate --migrationPath=@yii/rbac/migrations
 
 php yii migrate
 
-[![Watch the video](https://img.youtube.com/vi/RFKo-WI1B7E/0.jpg)](https://www.youtube.com/embed/RFKo-WI1B7E)
-
-https://www.youtube.com/embed/RFKo-WI1B7E
-
 
 Создать сервис библиотеки с возможностью добавлять  читателей и книги и передачи книги на чтение.  
 	У книги должна быть возможность передачу её на чтения и возврат. Во время передачи на чтение надо указывать читателя,  дату выдачи и количество дней на который выдается книга. 
