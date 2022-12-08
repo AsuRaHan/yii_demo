@@ -2,7 +2,6 @@
 
 namespace app\controllers;
 
-use app\models\Authors;
 use app\models\BookSearch;
 use app\models\SignupForm;
 use Yii;
@@ -15,7 +14,6 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\Category;
 use app\models\Book;
 use app\models\PasswordResetRequestForm;
 use app\models\ResetPasswordForm;

@@ -23,7 +23,9 @@
         "yurkinx/yii2-image": "^1.3",
         "zircote/swagger-php": "^4.5",
         "kartik-v/yii2-widget-datepicker": "*",
-        "kartik-v/yii2-field-range": "*"
+        "kartik-v/yii2-field-range": "*",
+        "kartik-v/yii2-grid": "@dev",
+        "kartik-v/yii2-bootstrap5-dropdown": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

@@ -4,3 +4,6 @@
 /yii_demo/.env
 /yii_demo/nbproject/*
 /yii_demo/vendor/*
+/yii_demo/node_modules/*
+yii_demo/yarn.lock
+yii_demo/views/site/bkp_index.php

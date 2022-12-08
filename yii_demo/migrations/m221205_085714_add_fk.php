@@ -28,18 +28,4 @@ class m221205_085714_add_fk extends Migration {
         return false;
     }
 
-    /*
-      // Use up()/down() to run migration code without a transaction.
-      public function up()
-      {
-
-      }
-
-      public function down()
-      {
-      echo "m221205_085714_add_fk cannot be reverted.\n";
-
-      return false;
-      }
-     */
 }

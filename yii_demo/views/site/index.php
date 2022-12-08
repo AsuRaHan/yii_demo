@@ -1,39 +1,39 @@
 <?php
 
 use \yii\bootstrap5\LinkPager;
+use \yii\helpers\Url;
 
 /** @var yii\web\View $this */
 /** @var app\models\Book $models */
 /** @var yii\data\Pagination $pages */
 $this->title = 'My Yii Books';
 
+$this->registerJsFile(
+    'https://unpkg.com/vue@next'
+);
+$this->registerJsFile(
+    'https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js'
+);
 ?>
 
-
-<?=$this->render('searchform',['query'=>'']);?>
-
-<div class="d-flex flex-wrap mb-3">
-
-    <?php foreach ($models as $model) : ?>
-
-        <div class="card m-2" style="width: 19rem;">
-            <img src="<?= $model->image ?:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Noimage.svg/739px-Noimage.svg.png' ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"><?= $model->name ?></h5>
-                <p class="card-text"><?= $model->description ?></p>
-
-            </div>
-            <div class="card-footer">
-                <a href="<?= \yii\helpers\Url::to(['/site/book', 'id' => $model->id]) ?>" class="btn btn-success">Go</a>
-            </div>
-        </div>
-
-    <?php endforeach; ?>
-
+<div id="bookList">
+    Счётчик: {{ counter }}
 </div>
-<div class="d-flex justify-content-center">
-    <?= LinkPager::widget([
-        'pagination' => $pages,
 
-    ]); ?>
-</div>
+<?php
+$this->registerJs(<<<JS
+    const bookList = {
+          data() {
+                return {
+                  books: 0
+                }
+          },
+          mounted() {
+
+          }
+        }
+
+Vue.createApp(bookList).mount('#bookList')
+JS
+);
+?>

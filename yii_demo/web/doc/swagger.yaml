@@ -7,7 +7,7 @@ paths:
     post:
       tags:
         - auth
-      summary: 'Получить токен доступа в API'
+      summary: 'Получить токен доступа к API по логину и паролю пользователя <b>Проверим как тут</b>'
       operationId: eb7771196a969283379e691647c6ac73
       requestBody:
         content:

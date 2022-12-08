@@ -8,24 +8,44 @@ use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 use yii\behaviors\TimestampBehavior;
 
+/**
+ * @property string|null $access_token
+ */
 class User extends ActiveRecord implements IdentityInterface {
     const STATUS_DELETED = -1;
     const STATUS_BLOCKED = 0;
     const STATUS_WAIT = 2;
     const STATUS_ACTIVE = 10;
 
+    public function rules() {
+        return [
+            ['username', 'required'],
+            ['username', 'match', 'pattern' => '#^[\w_-]+$#i'],
+            ['username', 'unique', 'targetClass' => self::className(), 'message' => Yii::t('app', 'ERROR_USERNAME_EXISTS')],
+            ['username', 'string', 'min' => 2, 'max' => 255],
+
+            ['email', 'required'],
+            ['email', 'email'],
+            ['email', 'unique', 'targetClass' => self::className(), 'message' => Yii::t('app', 'ERROR_EMAIL_EXISTS')],
+            ['email', 'string', 'max' => 255],
+
+            ['status', 'integer'],
+            ['status', 'default', 'value' => self::STATUS_ACTIVE],
+            ['status', 'in', 'range' => array_keys(self::getStatusesArray())],
+        ];
+    }
+
     public function behaviors() {
         return [
             TimestampBehavior::class,
         ];
     }
-    public function getStatusName()
-    {
+
+    public function getStatusName() {
         return ArrayHelper::getValue(self::getStatusesArray(), $this->status);
     }
 
-    public static function getStatusesArray()
-    {
+    public static function getStatusesArray() {
         return [
             self::STATUS_DELETED => Yii::t('app', 'DELETED'),
             self::STATUS_BLOCKED => Yii::t('app', 'BLOCKED'),
@@ -37,8 +57,7 @@ class User extends ActiveRecord implements IdentityInterface {
     /**
      * @inheritdoc
      */
-    public function beforeSave($insert)
-    {
+    public function beforeSave($insert) {
         if (parent::beforeSave($insert)) {
             if ($insert) {
                 $this->generateAuthKey();
@@ -47,6 +66,7 @@ class User extends ActiveRecord implements IdentityInterface {
         }
         return false;
     }
+
 // отбрасываем некоторые поля. Лучше всего использовать в случае наследования
     public function fields() {
         $fields = parent::fields();

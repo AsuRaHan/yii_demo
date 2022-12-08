@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\User;
+use yii\base\InvalidConfigException;
 use yii\filters\AccessControl;
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBasicAuth;
@@ -83,7 +84,7 @@ class ApiController extends Controller {
      * @OA\Post(
      *     path="/api/get-access-token",
      *     tags={"auth"},
-     *     summary="Получить токен доступа в API",
+     *     summary="Получить токен доступа(access_token) к API по логину и паролю пользователя. В дальнейшем этот токен используется ко всем приватным API запросам",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",
@@ -125,8 +126,9 @@ class ApiController extends Controller {
      *      )
      * )
      * @return Response
+     * @throws InvalidConfigException
      */
-    public function actionGetAccessToken() {
+    public function actionGetAccessToken(): Response {
 
         $data = Yii::$app->request->getBodyParams();
 
@@ -161,12 +163,18 @@ class ApiController extends Controller {
             $user->save();
         }
 
-        $result =  ['access_token' => yii::$app->user->identity->access_token];
+        $access_token = yii::$app->user?->identity?->access_token;
+        if(!$access_token){
+            $result =  ['error' => 'error get access token on user'];
+            Yii::$app->response->statusCode = 409;
+            return Controller::asJson($result);
+        }
+        $result =  ['access_token' => $access_token];
         return Controller::asJson($result);
     }
-
+    #[Route('/api/test',name:'test',methods: ['GET'])]
     public function actionTest() {
-        $data = \Yii::$app->request->post();;
+        $data = \Yii::$app->request->getBodyParams();
         return $data;
     }
 }

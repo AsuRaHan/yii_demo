@@ -5,6 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
+    'name'=>'Библиотека книг',
     'language' => 'ru',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -17,6 +18,9 @@ $config = [
             'class' => 'app\modules\admin\Module',
             'layout' => 'admin'
         ],
+//        'gridview' => [
+//            'class' => '\kartik\grid\Module',
+//        ],
     ],
     'components' => [
         'request' => [
