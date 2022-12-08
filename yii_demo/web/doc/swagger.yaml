@@ -6,9 +6,24 @@ paths:
   /api/get-access-token:
     post:
       tags:
-        - auth
-      summary: 'Получить токен доступа к API по логину и паролю пользователя <b>Проверим как тут</b>'
+        - 'Auth API'
+      summary: 'Получить токен доступа(access_token) к API по логину и паролю пользователя. В дальнейшем этот токен используется ко всем приватным API запросам'
       operationId: eb7771196a969283379e691647c6ac73
+      parameters:
+        -
+          name: username
+          in: query
+          description: 'Имя пользователя'
+          schema:
+            type: string
+          example: tester
+        -
+          name: password
+          in: query
+          description: 'Пароль. внимание!!! пароль передается в открытом виде в теле запроса'
+          schema:
+            type: string
+          example: '123456'
       requestBody:
         content:
           application/json:
@@ -40,3 +55,94 @@ paths:
                 default: 'Не верный логин или пароль'
               example:
                 error: 'user not found'
+  /api/books-list:
+    post:
+      tags:
+        - 'Book API'
+      summary: 'Получить список книг с учетом пагинации, сортировки и поиска. Для этого в теле запроса есть следующие параметры'
+      operationId: 4231ec14812e35890174c7f7ce0bfb9c
+      parameters:
+        -
+          name: limit
+          in: query
+          description: 'Количетво элементов, которое необходимо вернуть'
+          schema:
+            type: intval
+            default: '20'
+          example: '10'
+        -
+          name: offset
+          in: query
+          description: 'Позиция, начиная с которой, необходимо вернуть элементы'
+          schema:
+            type: intval
+            default: '0'
+          example: '0'
+        -
+          name: sort_field
+          in: query
+          description: 'Поле по которому необходимо сортировать (id, name)'
+          schema:
+            type: string
+            default: id
+          example: name
+        -
+          name: sort_direction
+          in: query
+          description: 'Направление сортировки(ASC, DESC)'
+          schema:
+            type: string
+            default: DESC
+          example: ASC
+        -
+          name: search_string
+          in: query
+          description: 'Строка поиска по названию или описанию книги'
+          schema:
+            type: string
+            default: 'null'
+          example: 'Война за мир'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                offset:
+                  type: intval
+                limit:
+                  type: intval
+              type: object
+              example:
+                offset: 0
+                limit: 2
+                sort_field: name
+                sort_direction: DESC
+                search_string: ''
+      responses:
+        '200':
+          description: 'Вернет Объект с книгами а так же общее колличество книг в базе'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                count: 100
+                column:
+                  - id
+                  - user_is
+                  - name
+                  - description
+                  - isbn
+                  - image
+                list:
+                  - { id: 1, user_is: 0, name: 'Война и мир', description: 'Ex quia sint...', isbn: '9795596952420', image: 'https://img.net/image.png' }
+                  - { id: 2, user_is: 0, name: 'Майн кампф', description: 'Quo harum dolore et plicabo...', isbn: '9799515349964', image: 'https://avatars.mds.yandex.net/get-kinopoisk-image.png' }
+        '409':
+          description: 'Неудачный запрос'
+          content:
+            application/json:
+              schema:
+                type: string
+                default: 'Если произойдет ошибка. то вернет сообщение об ошибки'
+              example:
+                error: 'Sort field name is wrong'

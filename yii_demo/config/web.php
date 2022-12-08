@@ -5,7 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
-    'name'=>'Библиотека книг',
+    'name'=>'Books library',
     'language' => 'ru',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -83,7 +83,7 @@ $config = [
 //                '<_m:[\w\-]+>/<_c:[\w\-]+>' => '<_m>/<_c>/index',
 
 //                '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
-                //['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'book'],
             ],
         ],
     ],

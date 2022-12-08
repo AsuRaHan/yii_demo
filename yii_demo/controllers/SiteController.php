@@ -66,16 +66,18 @@ class SiteController extends Controller {
      * @return string
      */
     public function actionIndex() {
-        $query = Book::find();
-        $countQuery = clone $query;
-        $pages = new Pagination(['totalCount' => $countQuery->count(), 'forcePageParam' => false, 'pageSizeParam' => false]);
-        $models = $query->offset($pages->offset)
-            ->limit($pages->limit)
-            ->all();
-        return $this->render('index', [
-            'models' => $models,
-            'pages' => $pages,
-        ]);
+//        $query = Book::find();
+//        $countQuery = clone $query;
+//        $pages = new Pagination(['totalCount' => $countQuery->count(), 'forcePageParam' => false, 'pageSizeParam' => false]);
+//        $models = $query->offset($pages->offset)
+//            ->limit($pages->limit)
+//            ->all();
+        return $this->render('index'
+//            , [
+//            'models' => $models,
+//            'pages' => $pages,
+//        ]
+        );
     }
 
     /**

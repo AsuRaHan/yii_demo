@@ -82,23 +82,7 @@ class BookSearch extends book
         $data = \Yii::$app->cache->get($key);
 
         if ($data === false) {
-            $words = explode(' ', $search);
-            $relevance = "IF (`name` LIKE '%" . $words[0] . "%', 2, 0)";
-            $relevance .= " + IF (`description` LIKE '%" . $words[0] . "%', 1, 0)";
-            for ($i = 1; $i < count($words); $i++) {
-                $relevance .= " + IF (`name` LIKE '%" . $words[$i] . "%', 2, 0)";
-                $relevance .= " + IF (`description` LIKE '%" . $words[$i] . "%', 1, 0)";
-            }
-            $query = (new Query())
-                ->select(['*', 'relevance' => $relevance])
-                ->from('book')
-                ->where(['like', 'name', $words[0]])
-                ->orWhere(['like', 'description', $words[0]]);
-            for ($i = 1; $i < count($words); $i++) {
-                $query = $query->orWhere(['like', 'name', $words[$i]]);
-                $query = $query->orWhere(['like', 'description', $words[$i]]);
-            }
-            $query = $query->orderBy(['relevance' => SORT_DESC]);
+            $query = $this->getQuerySearchResult();
             $pages = new Pagination([
                 'totalCount' => $query->count(),
                 'pageSize' => 20,
@@ -116,11 +100,30 @@ class BookSearch extends book
         return $data;
     }
 
-    protected function cleanSearchString($search) {
+    public function cleanSearchString($search) {
         $search = iconv_substr($search, 0, 64);
         $search = preg_replace('#[^0-9a-zA-ZА-Яа-яёЁ]#u', ' ', $search);
         $search = preg_replace('#\s+#u', ' ', $search);
         $search = trim($search);
         return $search;
+    }
+    public function getQuerySearchResult($search) {
+        $words = explode(' ', $search);
+        $relevance = "IF (`name` LIKE '%" . $words[0] . "%', 2, 0)";
+        $relevance .= " + IF (`description` LIKE '%" . $words[0] . "%', 1, 0)";
+        for ($i = 1; $i < count($words); $i++) {
+            $relevance .= " + IF (`name` LIKE '%" . $words[$i] . "%', 2, 0)";
+            $relevance .= " + IF (`description` LIKE '%" . $words[$i] . "%', 1, 0)";
+        }
+        $query = (new Query())
+            ->select(['*', 'relevance' => $relevance])
+            ->from('book')
+            ->where(['like', 'name', $words[0]])
+            ->orWhere(['like', 'description', $words[0]]);
+        for ($i = 1; $i < count($words); $i++) {
+            $query = $query->orWhere(['like', 'name', $words[$i]]);
+            $query = $query->orWhere(['like', 'description', $words[$i]]);
+        }
+        return $query;
     }
 }
