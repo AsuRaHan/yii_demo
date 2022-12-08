@@ -6,7 +6,7 @@ php yii migrate --migrationPath=@yii/rbac/migrations
 
 php yii migrate
 
-[![Watch the video](https://www.youtube.com/embed/RFKo-WI1B7E)](https://www.youtube.com/embed/RFKo-WI1B7E)
+[![Watch the video](https://img.youtube.com/vi/RFKo-WI1B7E/0.jpg)](https://www.youtube.com/embed/RFKo-WI1B7E)
 
 https://www.youtube.com/embed/RFKo-WI1B7E
 
